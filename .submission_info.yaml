@@ -1,0 +1,59 @@
+hasInvitedTaCollaborator: true
+associatedNameAndRepo: true
+lab1:
+  week1:
+    done: true
+    date: 'Fri Feb 09 2024 14:05:19 GMT-0600 (Central Standard Time)'
+    checklist:
+      I got Linux (or docker or whatever) running: true
+      I got rviz running: true
+      I got the robot to move on rviz (e.g. test command): true
+      I can use change the face's expressions on the camera website: true
+      I can demo the interactive python terminal: true
+      I can print a statement when audio is above a threshold: true
+      I made a curious/look-around behavior in rviz: true
+      I could display python messages on the camera website: true
+    demonstrated: true
+  week2:
+    done: true
+    date: 'Fri Feb 16 2024 14:19:32 GMT-0600 (Central Standard Time)'
+    checklist:
+      I created clap detection: true
+      My code structure follows a behaviorial schema: true
+      Clapping triggers the curious action in survivor buddy (on rviz): true
+      Survivor buddy returns to its original pose after looking around: true
+    demonstrated: true
+  week3:
+    done: true
+    date: 'Fri Mar 01 2024 14:04:45 GMT-0600 (Central Standard Time)'
+    checklist:
+      I created a fearful action: true
+      the fearful action involves more than 1 motor: true
+      the fearful action includes a facial expression: true
+      I created a startled action: true
+      the startled action has an intensity parameter: true
+      the startled action involves more than 1 motor: true
+      the survivor buddy returns to its original pose after a while: true
+      the survivor buddy can fall asleep: true
+      'Continuous loud noise causes fearful, even if in a curious/startled action': true
+      Clapping when awake triggers curious: true
+      Clapping when asleep triggers startled: true
+      Louder claps cause a greater startle reaction (even if its hard to see the difference): true
+    demonstrated: true
+  week4:
+    done: true
+    date: 'Thu Mar 21 2024 16:25:12 GMT-0500 (Central Daylight Time)'
+    checklist:
+      I can use the face API in python: true
+      I can make a talking sound: true
+      Seeing a face in a neutral state triggers the happy expression: true
+      The 'look at' behavior was created: true
+      Survivor buddy starts talking when there's moderate noise: true
+      Loud noise cause the fearful behavior: true
+      No stimulus for some amount of time causes survivor buddy to go into a neutral state: true
+      A face being too close causes the startled behavior: true
+      Survivor buddy starts looking/tracking a face if one is in view: true
+      'If a face gets too close, survivor buddy leans back': true
+      'If a face disappears from center view, survivor buddy acts curious': true
+    demonstrated: true
+gitIsConfigured: true

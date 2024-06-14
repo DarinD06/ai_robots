@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+url="https://github.com/jeff-hykin/tamu_csce_635_labs.git" 
+branch="master" 
+
+# default to nano/pico if no git editor is set
+if [ -z "$GIT_EDITOR" ]
+then
+    if [ -n "$(command -v "nano")" ]
+    then
+        export GIT_EDITOR=nano
+    else
+        if [ -n "$(command -v "pico")" ]
+        then
+            export GIT_EDITOR=pico
+        fi
+    fi
+fi
+
+if [[ -z "$url" ]]
+then
+        echo "What is the url to the mixin?"
+        read url
+fi
+if [[ -z "$branch" ]]
+then
+        echo "What is the branch you want to mixin? (default=master)"
+        read branch
+        if [[ -z "$branch" ]]
+        then
+                branch="master" 
+        fi
+fi
+git remote remove "@__temp__" &> /dev/null
+git remote add "@__temp__" "$url"
+git fetch "@__temp__" "$branch"
+if ! [[ -z "$commit" ]]
+then
+        git cherry-pick "$commit"
+else
+        git pull --allow-unrelated-histories "@__temp__" "$branch"
+fi
+git submodule update --init --recursive
+git remote remove "@__temp__" &> /dev/null
